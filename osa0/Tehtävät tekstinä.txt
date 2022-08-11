@@ -1,0 +1,32 @@
+0.4:
+
+selain-palvelin HTTP POST httpsstudies.cs.helsinki.fiexampleappnew_note
+palvelin--selain Uudelleenohjauspyyntö (302)
+
+note over selain
+automaattisesti uuden HTTP GET -pyynnön headerin 
+Location kertomaan paikkaan,eli osoitteeseen notes.
+end note
+
+selain-palvelin HTTP GET httpsstudies.cs.helsinki.fiexampleappnotes
+palvelin--selain HTML-koodi
+
+selain-palvelin HTTP GET httpsstudies.cs.helsinki.fiexampleappmain.css
+palvelin--selain main.css
+
+selain-palvelin httpsstudies.cs.helsinki.fiexampleappmain.js
+palvelin--selain main.js
+
+note over selain
+selain alkaa suorittamaan js-koodia,
+joka pyytää JSON-datan palvemilelta
+end note
+
+selain-palvelin HTTP GET httpsstudies.cs.helsinki.fiexampleappdata.json
+palvelin--selain [{contentnew test,date2022-08-11T072024.764Z}, ...]
+
+note over selain
+selain suorittaa tapahtumankäsittelijän
+joka renderöi muistiinpanot näytölle
+end note
+
