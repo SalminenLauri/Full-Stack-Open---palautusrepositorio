@@ -1,3 +1,5 @@
+Tehty osoitteessa https://www.websequencediagrams.com
+
 0.4:
 
 selain-palvelin HTTP POST httpsstudies.cs.helsinki.fiexampleappnew_note
@@ -53,3 +55,14 @@ joka renderöi muistiinpanot näytölle
 end note
 
 0.6:
+
+note over selain:
+lomakkeen lähettämisessä tapahtumankäsittelijä
+kutsuu metodia e.preventDefault (). Tämän jälkeen
+se luo muistiinpanon ja lisää sen muistiinpanojen 
+listalle ja lähettää ne palvelimelle.
+end note
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+palvelin-->selain: 201 created
+
