@@ -11,7 +11,7 @@ const Part = (props) => {
   console.log(props)
   return (
     <div>
-      {props.part} {props.exercises}
+      <p>{props.part} {props.exercises}</p>
     </div>
   )
   }
