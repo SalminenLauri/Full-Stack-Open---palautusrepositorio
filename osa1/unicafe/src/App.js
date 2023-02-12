@@ -54,20 +54,20 @@ const Statistics = (props) => {
 
 const App = () => {
   // tallenna napit omaan tilaansa
-  const [good, setGood] = useState(0)
-  const [neutral, setNeutral] = useState(0)
-  const [bad, setBad] = useState(0)
-
+  const [feedbacks, setFeedbacks] = useState({
+    good: 0, neutral: 0, bad:0
+  })
+  
   const handleGoodClick = () => {
-    setGood(good+1)
+    setFeedbacks({ ...feedbacks, good: feedbacks.good + 1 })
   }
 
   const handleNeutralClick = () => {
-    setNeutral(neutral+1)
+    setFeedbacks({ ...feedbacks, neutral: feedbacks.neutral + 1 })
   }
 
   const handleBadClick = () => {
-    setBad(bad+1)
+    setFeedbacks({ ...feedbacks, bad: feedbacks.bad + 1 })
   }
 
   return (
@@ -79,7 +79,7 @@ const App = () => {
         <Button handleClick={handleBadClick} text='bad'/>
       </div>
       <Header text="statistics"/>
-      <Statistics good={good} bad={bad} neutral={neutral}/>
+      <Statistics good={feedbacks.good} bad={feedbacks.bad} neutral={feedbacks.neutral}/>
     </div>
   )
 }
