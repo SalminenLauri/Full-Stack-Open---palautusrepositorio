@@ -22,7 +22,6 @@ const App = () => {
     }
 
     if(persons.some(person => person.name === contactObject.name)){
-      console.log("Sisältää jo nimen")
       alert(`${newName} is already added to phonebook`)
     } else {
       setPersons(persons.concat(contactObject))
