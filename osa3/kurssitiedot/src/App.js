@@ -1,5 +1,9 @@
 import Course from './components/Course'
 
+const MainHeader = (props) => {
+  return <h1>{props.header}</h1>
+}
+
 
 const App = () => {
   const courses = [
@@ -49,6 +53,7 @@ const App = () => {
 
   return (
     <div>
+      <MainHeader header="Web development curriculum"/>
       {courses.map(course =>
         <Course key={course.id} course={course}/>
       )}
