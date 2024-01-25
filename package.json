@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "axios": "^1.6.5"
+  },
+  "scripts":{
+    "server": "json-server -p3001 --watch db.json",
+    "dev": "index",
+    "build": "inex build"
+  },
+  "devDependencies": {
+    "json-server": "^1.0.0-alpha.22"
+  }
+}
